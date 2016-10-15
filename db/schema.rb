@@ -10,10 +10,51 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161014173242) do
+ActiveRecord::Schema.define(version: 20161015172158) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "artisans", force: :cascade do |t|
+    t.string   "desription"
+    t.string   "compagny_name"
+    t.string   "adress_l1"
+    t.string   "adress_l2"
+    t.string   "city"
+    t.string   "postal_code"
+    t.string   "manager_name"
+    t.string   "phone_number"
+    t.string   "manager_email"
+    t.string   "insurer"
+    t.string   "insurance_number"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
+  create_table "clients", force: :cascade do |t|
+    t.string   "name"
+    t.string   "adress_l1"
+    t.string   "adress_l2"
+    t.string   "city"
+    t.string   "postal_code"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "interventions", force: :cascade do |t|
+    t.string   "nature"
+    t.integer  "client_id"
+    t.integer  "artisan_id"
+    t.float    "quotation_amount"
+    t.float    "final_amount"
+    t.datetime "asked_date"
+    t.datetime "scheduled_date"
+    t.string   "avancement"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.index ["artisan_id"], name: "index_interventions_on_artisan_id", using: :btree
+    t.index ["client_id"], name: "index_interventions_on_client_id", using: :btree
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
