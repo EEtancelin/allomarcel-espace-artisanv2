@@ -1,0 +1,28 @@
+.intervention-demand-header{
+  margin-left: 10px;
+}
+
+
+.demand-card-wrapper{
+  padding : 5px ;
+  margin: auto 0px;
+  display: flex;
+  justify-content: center;
+}
+
+
+.demand-card{
+  width: 200px;
+  font-size: 12px;
+}
+
+.date-demand-card{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calendar-date-demand-card{
+  font-size: 18px;
+  margin: auto 0px;
+}

@@ -1,2 +1,16 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+      <div id="page-content-wrapper">
+      <div class="intervention-demand-header">
+        <h3>Demandes d'interventions</h3>
+      </div>
+
+        <!-- Keep all page content within the page-content inset div! -->
+        <div class="page-content inset">
+          <div class="row">
+                <%= render 'shared/demandCard' %>
+                <%= render 'shared/demandCard' %>
+                <%= render 'shared/demandCard' %>
+                <%= render 'shared/demandCard' %>
+                <%= render 'shared/demandCard' %>
+          </div>
+        </div>
+      </div>
