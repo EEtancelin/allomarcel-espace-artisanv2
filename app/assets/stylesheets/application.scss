@@ -14,3 +14,8 @@
 @import "pages/index";
 @import "vendor/index";
 @import "components/sidebar";
+@import "components/demandcard";
+
+#page-content-wrapper {
+  width: 100%;
+}

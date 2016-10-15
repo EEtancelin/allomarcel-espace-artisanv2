@@ -14,19 +14,24 @@
   <%= render 'shared/flashes' %>
   <div class="wrapper">
     <div class ="container-fluid" >
+      <%= render 'shared/sidebar' %>
 
       <div class="row">
 
-      <div class="col-xs-6 col-sm-3 col-md-2 sidebar-wrapper">
+      <div class="page-content-wrapper col-xs-6 col-sm-3 col-md-2">
 
-          <%= render 'shared/sidebar' %>
         </div>
-        <div class="col-xs-6 col-sm-8">
+          <%= render 'shared/demandCard' %>
+          <%= render 'shared/demandCard' %>
+          <%= render 'shared/demandCard' %>
+          <%= render 'shared/demandCard' %>
+          <%= render 'shared/demandCard' %>
           <%= yield %>
         </div>
       </div>
     </div>
   </div>
+
   <%= javascript_include_tag 'application' %>
 </body>
 </html>
