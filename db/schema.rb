@@ -18,8 +18,7 @@ ActiveRecord::Schema.define(version: 20161015172158) do
   create_table "artisans", force: :cascade do |t|
     t.string   "desription"
     t.string   "compagny_name"
-    t.string   "adress_l1"
-    t.string   "adress_l2"
+    t.string   "address"
     t.string   "city"
     t.string   "postal_code"
     t.string   "manager_name"
@@ -33,12 +32,12 @@ ActiveRecord::Schema.define(version: 20161015172158) do
 
   create_table "clients", force: :cascade do |t|
     t.string   "name"
-    t.string   "adress_l1"
-    t.string   "adress_l2"
+    t.string   "address"
     t.string   "city"
     t.string   "postal_code"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.string   "phone_number"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   create_table "interventions", force: :cascade do |t|

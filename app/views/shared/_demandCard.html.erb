@@ -6,18 +6,15 @@
         <i class="icon-file-pdf"></i>
       </a>
       <h4 class="list-group-item-heading">
-        <a href="#">Remplacment d'une chaudiére</a>
+        <a href="#"><%=intervention.nature%></a>
       </h4>
     </div>
     <div class="list-group">
       <div class="list-group-item">
-        <address>
-          <strong>Twitter, Inc.</strong><br>
-          1355 Market Street, Suite 900<br>
-          San Francisco, CA 94103<br>
-          <br>
-          <abbr title="Phone">Tél:</abbr> 06 47 62 57 21
-        </address>
+        <%= render partial: 'shared/client_details',
+                    locals: {client: intervention.client} %>
+
+
         <strong>Date</strong><br>
         <div class ="date-demand-card">
         <div>
